@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {
     View,
+    Image,
     Text,
     TextInput,
     TouchableOpacity,
@@ -57,12 +58,17 @@ class Post extends Component{
 
 
     render(){
-        // console.log(this.props);
+        console.log(this.props.dataPost);
         return(
                 <View style={styles.separator}>
                     <Text>Post de: {this.props.dataPost.data.owner}</Text>
+                    <Image 
+                        style={styles.image}
+                        resizeMode='center'
+                        source={{uri:this.props.dataPost.data.url}}
+                    />
                     <Text>Texto del Post: {this.props.dataPost.data.description}</Text>
-                     <Text>Cantidad de likes: {this.state.cantidadDeLikes}</Text>
+                    <Text>Cantidad de likes: {this.state.cantidadDeLikes}</Text>
                     {
                         this.state.myLike ?
                         <TouchableOpacity onPress={()=> this.unLike()}>
@@ -89,6 +95,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         paddingHorizontal:20
     },
+    image:{
+        height: 100,
+        width: 115,
+    }
     
 })
 
