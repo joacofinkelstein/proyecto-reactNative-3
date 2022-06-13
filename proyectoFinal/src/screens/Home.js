@@ -22,7 +22,7 @@ class Home extends Component {
             docs => {
                 let posts = [];
                 docs.forEach( oneDoc => {
-                    console.log(oneDoc);
+                    // console.log(oneDoc);
                     posts.push({
                         id: oneDoc.id,
                         data: oneDoc.data()
@@ -40,6 +40,7 @@ class Home extends Component {
 
 
     render(){
+        console.log(auth);
         // console.log(this.state);
         return(
                 <View style={styles.container}>
