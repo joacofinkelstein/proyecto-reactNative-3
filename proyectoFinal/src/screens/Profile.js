@@ -60,7 +60,7 @@ class Profile extends Component{
                     {/*Last Online + Cant*/}
                     <View>
                         <Text>Last Online: {auth.currentUser.metadata.lastSignInTime}</Text>
-                        <Text>Cantidad de Posteos: </Text>
+                        <Text>Cantidad de Posteos: {this.state.posts.length}</Text>
                     </View>
                     <View>
                         <Text>Posteos</Text>
