@@ -61,7 +61,7 @@ class NewPost extends Component{
                         onChangeText={text => this.setState({ description: text})}
                         multiline
                     />
-                    <TouchableOpacity style={styles.button} onPress={()=>this.guardarPost()}>
+                    <TouchableOpacity disabled={this.state.description.length===0? true: false} style={styles.button} onPress={()=>this.guardarPost()}>
                         <Text style={styles.buttonText}>Guardar Post</Text>
                     </TouchableOpacity>               
                 </View>
@@ -77,26 +77,48 @@ const styles = StyleSheet.create({
     container:{
         paddingHorizontal:10,
         marginTop: 10,
-        height:'100%'
+        height: "100%", 
+        display: "flex", 
+        justifyContent: "center",
+        alignItems: "center",
     },
     title:{
-        marginBottom:20
+        marginBottom:20, 
+        fontSize: 30, 
+        color: "red", 
+    
     },
     field:{
         borderColor: '#dcdcdc',
         borderWidth: 1,
         borderRadius: 2,
         padding:3,
-        marginBottom:8
+        marginBottom:8, 
+        width: 250, 
+        height: 30
+
     },
     button: {
-        borderRadius: 2,
+        display: "flex", 
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 5,
         padding:3,
         backgroundColor: 'green',
+        width: 100, 
+        height: 30
     },
     buttonText:{
         color: '#fff'
+    }, 
+    link: {
+        color: "blue", 
+        marginTop: 20, 
+    }, 
+    error: {
+        color: "red", 
     }
+
 })
 
 export default NewPost;
