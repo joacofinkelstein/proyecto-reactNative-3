@@ -55,12 +55,21 @@ class Post extends Component{
             }))
             .catch(error => console.log(error))
     }
+    deletePost(){
 
+        db.collection("posts").doc(this.props.dataPost.id).delete();
+    }
 
     render(){
-        console.log(this.props.dataPost);
+        console.log("los props del datapost",this.props.dataPost.data.owner);
+        console.log("el usuario logueado", auth.currentUser.email)
         return(
                 <View style={styles.separator}>
+                    { this.props.dataPost.data.owner == auth.currentUser.email ?(
+                    <TouchableOpacity onPress={()=> this.deletePost()}>
+                            <Text>Eliminar Post</Text>
+                        </TouchableOpacity> 
+                    ):""}
                     <Text>Post de: {this.props.dataPost.data.owner}</Text>
                     <Image 
                         style={styles.image}
