@@ -50,36 +50,36 @@ class Search extends Component {
         // console.log(this.state);
         return (
             <View>
-                
-                        <Text>Posts del usuario: {this.state.whoIs}</Text>
-                        <View style={styles.form}>
-                            <TextInput
-                                style={styles.field}
-                                keyboardType='default'
-                                placeholder='email a buscar...'
-                                value={this.state.email}
-                                onChangeText={text => this.setState({ email: text })}
-                            />
-                            <TouchableOpacity
-                                style={styles.button}
-                                onPress={() => this.search(this.state.email)}
-                                //👇 Les dejo un dato sorpresa para los que llegaron hasta acá: así se deshabilita un touchable opacity
-                                disabled={this.state.email == '' ? true : false}
-                            >
-                                <Text style={styles.buttonText}>Buscar</Text>
-                            </TouchableOpacity>
-                        </View>
-                        {this.state.posts.length == 0 ? <Text>No existen resultados para tu criterio de busqueda</Text> : (
+
+                <Text>Posts del usuario: {this.state.whoIs}</Text>
+                <View style={styles.form}>
+                    <TextInput
+                        style={styles.field}
+                        keyboardType='default'
+                        placeholder='email a buscar...'
+                        value={this.state.email}
+                        onChangeText={text => this.setState({ email: text })}
+                    />
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => this.search(this.state.email)}
+                        //👇 Les dejo un dato sorpresa para los que llegaron hasta acá: así se deshabilita un touchable opacity
+                        disabled={this.state.email == '' ? true : false}
+                    >
+                        <Text style={styles.buttonText}>Buscar</Text>
+                    </TouchableOpacity>
+                </View>
+                {this.state.posts.length == 0 ? <Text>El usuario no existe o aún no tiene publicaciones.</Text> : (
 
 
-<>  
-                <FlatList
-                    data={this.state.posts}
-                    keyExtractor={post => post.id}
-                    renderItem={({ item }) => <Post dataPost={item}
-                        {...this.props} />}
-                />
- </>)}
+                    <>
+                        <FlatList
+                            data={this.state.posts}
+                            keyExtractor={post => post.id}
+                            renderItem={({ item }) => <Post dataPost={item}
+                                {...this.props} />}
+                        />
+                    </>)}
             </View>
 
         )
