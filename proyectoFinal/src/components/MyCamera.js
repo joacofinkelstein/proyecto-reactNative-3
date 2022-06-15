@@ -68,7 +68,10 @@ class MyCamera extends Component{
     }
 
     eliminarPreview(){
-        //Todo para alumnos.
+        this.setState({
+            url:"",
+            showCamera: true,
+        })
     }
 
 
