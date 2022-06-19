@@ -81,8 +81,11 @@ const styles = StyleSheet.create({
         display: "flex", 
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: 'white'
     },
     title:{
+        fontFamily: 'arial', 
+        textAlign: 'center', 
         marginBottom:20, 
         fontSize: 30, 
         color: "red", 

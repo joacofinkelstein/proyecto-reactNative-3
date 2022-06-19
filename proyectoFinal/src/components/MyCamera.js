@@ -100,12 +100,12 @@ class MyCamera extends Component{
                             resizeMode='cover'
                         />
                         <TouchableOpacity 
-                            style={styles.button}
+                            style={styles.buttonGuardar}
                             onPress={()=>this.guardarFoto()}>
                             <Text>Guardar Foto</Text>
                         </TouchableOpacity>
                         <TouchableOpacity 
-                            style={styles.button}
+                            style={styles.buttonEliminar}
                             onPress={()=>this.eliminarPreview()}>
                             <Text>Eliminar</Text>
                         </TouchableOpacity>
@@ -125,21 +125,53 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         flexDirection:'column',
         height: 250,
+        width: '88%', 
+        marginLeft: '6%', 
+        marginBottom: '4%', 
     },
     button:{
         display: 'flex',
+        backgroundColor: "white",
         height: 50,
         width: 150,
+        borderRadius: 25, 
         alignItems: 'center',
         justifyContent:'center',
         borderColor: '#ccc',
         borderWidth: 1,
         padding: 5,
         borderRadius: 4,
-        marginTop: 20
+        marginTop: 10,
+        marginLeft: '6%',  
+        
+    },
+    buttonGuardar: {
+        display: 'flex', 
+        width: '30%', 
+        backgroundColor: "red", 
+        color: 'white', 
+        marginTop: '5%', 
+        marginLeft: '20%', 
+        textAlign: 'center', 
+        width: '60%', 
+        padding: '2%',
+    }, 
+    buttonEliminar: {
+        display: 'flex', 
+        width: '30%', 
+        backgroundColor: "red", 
+        color: 'white', 
+        marginTop: '5%', 
+        marginLeft: '20%', 
+        textAlign: 'center', 
+        width: '60%', 
+        padding: '2%',
+
     },
     preview:{
-        height:'80%'
+        height:'80%',
+        flex: 6, 
+        width: '100%',
     }
 }) 
 
