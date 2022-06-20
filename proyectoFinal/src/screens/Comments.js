@@ -102,7 +102,13 @@ const styles = StyleSheet.create({
     },
     buttonText:{
         color: '#fff'
-    }
+    },
+comments: {
+    fontSize: 18, 
+    fontWeight: 'normal',
+},
+
+
 })
 
 export default Comments;

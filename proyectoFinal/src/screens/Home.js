@@ -68,9 +68,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     content: {
+        
         alignItems: 'center',
-        marginTop: 50, 
-        marginBottom: 40
+        marginTop: 80, 
+        marginBottom: 60
     }, 
     box: {
         width: 150, 
