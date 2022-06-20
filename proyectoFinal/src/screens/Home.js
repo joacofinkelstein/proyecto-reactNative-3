@@ -13,7 +13,8 @@ class Home extends Component {
     constructor(props){
         super(props);
         this.state={
-            posts:[]
+            posts:[], 
+        
         }
     }
     
@@ -30,7 +31,9 @@ class Home extends Component {
                 })
 
                 this.setState({
-                    posts: posts
+                    posts: posts, 
+                    loading: false
+                
                 })
             }
         )
@@ -70,11 +73,11 @@ const styles = StyleSheet.create({
         marginBottom: 40
     }, 
     box: {
-        width: 100, 
+        width: 150, 
         height: 100, 
         backgroundColor: 'white', 
         marginBottom: 10
-        
+
     }
 
 })

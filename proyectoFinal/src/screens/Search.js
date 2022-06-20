@@ -37,7 +37,7 @@ class Search extends Component {
                 this.setState({
                     posts: posts,
                     email: '',
-                    whoIs: email,
+                    whoIs: this.state.email,
                 })
             }
         )

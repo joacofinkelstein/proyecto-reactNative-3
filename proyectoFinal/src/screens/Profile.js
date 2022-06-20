@@ -35,7 +35,9 @@ class Profile extends Component{
                 })
 
                 this.setState({
-                    posts: posts
+                    posts: posts, 
+                    loading: false
+                
                 })
             }
         )
@@ -68,6 +70,7 @@ class Profile extends Component{
                             data={this.state.posts}
                             keyExtractor={post => post.id}
                             renderItem = { ({item}) => <Post dataPost={item} 
+                            {...this.props}
                             />}
                         />
                     </View>
@@ -82,7 +85,7 @@ class Profile extends Component{
 }
 const styles = StyleSheet.create({
     container:{
-        // flex:1, 
+        flex:1, 
         backgroundColor: "#fff", 
         alignItems: "center", 
         justifyContent: "center", 
@@ -94,6 +97,17 @@ const styles = StyleSheet.create({
         height: '38%', 
         marginLeft: '34%',
     }, 
+    content: {
+        alignItems:'center', 
+        marginTop: 50, 
+        marginBottom: 40,
+    }, 
+    box: {
+        width:100, 
+        height: 100, 
+        backgroundColor: 'white', 
+        marginBottom: 10
+    },
     
 
 })
