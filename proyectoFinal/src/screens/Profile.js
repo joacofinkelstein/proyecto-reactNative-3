@@ -89,7 +89,13 @@ const styles = StyleSheet.create({
         padding: ' 4%', 
 
     }, 
+    image: {
+        width: '34%', 
+        height: '38%', 
+        marginLeft: '34%',
+    }, 
     
+
 })
 
 export default Profile;
