@@ -107,21 +107,8 @@ const styles = StyleSheet.create({
     image:{
         height: 100,
         width: 115,
-        marginLeft: '40%'
     }, 
-    unLike: {
-        backgroundColor: 'white', 
-        height: '48px',
-        marginLeft: '69%', 
-        marginRight: '5%', 
-        opacity: '50%',
-    },
-    like: {
-        backgroundColor: 'white', 
-        height: '48px', 
-        marginLeft: '69%', 
-        marginRight: '5%',
-    },
+    
     
 
 
