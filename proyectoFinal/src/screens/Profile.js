@@ -62,13 +62,13 @@ class Profile extends Component{
                         <Text>Last Online: {auth.currentUser.metadata.lastSignInTime}</Text>
                         <Text>Cantidad de Posteos: {this.state.posts.length}</Text>
                     </View>
-                    <View>
+                    <View style={styles.container}>
                         <Text>Posteos</Text>
                         <FlatList 
                             data={this.state.posts}
                             keyExtractor={post => post.id}
                             renderItem = { ({item}) => <Post dataPost={item} 
-                            {...this.props} />}
+                            />}
                         />
                     </View>
                     <TouchableOpacity  onPress={()=>this.props.route.params.logout()}>
@@ -82,7 +82,7 @@ class Profile extends Component{
 }
 const styles = StyleSheet.create({
     container:{
-        flex:1, 
+        // flex:1, 
         backgroundColor: "#fff", 
         alignItems: "center", 
         justifyContent: "center", 
