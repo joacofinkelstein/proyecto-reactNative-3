@@ -68,7 +68,7 @@ class Post extends Component{
                 <View style={styles.separator}>
                     { this.props.dataPost.data.owner == auth.currentUser.email ?(
                     <TouchableOpacity onPress={()=> this.deletePost()}>
-                        <Text>Eliminar Post</Text>
+                        <Text style={styles.eliminar}>Eliminar Post</Text>
                     </TouchableOpacity> 
                     ):""}
                     <Text>Post de: {this.props.dataPost.data.owner}</Text>
@@ -120,6 +120,9 @@ const styles = StyleSheet.create({
         gap: 5,
         flexDirection: 'row',
 
+    },
+    eliminar:{
+        color: 'red',
     },
     
     

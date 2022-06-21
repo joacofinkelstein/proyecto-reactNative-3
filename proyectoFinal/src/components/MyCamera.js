@@ -102,12 +102,12 @@ class MyCamera extends Component{
                         <TouchableOpacity 
                             style={styles.buttonGuardar}
                             onPress={()=>this.guardarFoto()}>
-                            <Text>Guardar Foto</Text>
+                            <Text style={styles.buttonText}>Guardar Foto</Text>
                         </TouchableOpacity>
                         <TouchableOpacity 
-                            style={styles.buttonEliminar}
+                            style={styles.buttonGuardar}
                             onPress={()=>this.eliminarPreview()}>
-                            <Text>Eliminar</Text>
+                            <Text style={styles.buttonText}>Eliminar</Text>
                         </TouchableOpacity>
                     </View> 
                 :
@@ -124,10 +124,11 @@ const styles = StyleSheet.create({
         display: "flex",
         justifyContent:'center',
         flexDirection:'column',
+        alignItems: 'center',
         height: 250,
-        width: '88%', 
-        marginLeft: '6%', 
+        width: '88%',  
         marginBottom: '4%', 
+        gap: 10,
     },
     button:{
         display: 'flex',
@@ -145,29 +146,25 @@ const styles = StyleSheet.create({
         marginLeft: '6%',  
         
     },
-    buttonGuardar: {
-        display: 'flex', 
-        width: '30%', 
-        backgroundColor: "red", 
-        color: 'white', 
-        marginTop: '5%', 
-        marginLeft: '20%', 
-        textAlign: 'center', 
-        width: '60%', 
-        padding: '2%',
-    }, 
-    buttonEliminar: {
-        display: 'flex', 
-        width: '30%', 
-        backgroundColor: "red", 
-        color: 'white', 
-        marginTop: '5%', 
-        marginLeft: '20%', 
-        textAlign: 'center', 
-        width: '60%', 
-        padding: '2%',
-
+    buttons:{
+        display: 'flex',
+        flexDirection: 'row',
+        gap: 10,
     },
+    buttonGuardar: {
+        display: "flex", 
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 5,
+        padding:3,
+        backgroundColor: 'red',
+        width: 100, 
+        height: 30
+    }, 
+    buttonText: {
+        color: '#fff'
+    },
+    
     preview:{
         height:'80%',
         flex: 6, 

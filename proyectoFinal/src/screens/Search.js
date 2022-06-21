@@ -49,8 +49,7 @@ class Search extends Component {
     render() {
         // console.log(this.state);
         return (
-            <View>
-
+            <View style={styles.box}>
                 <Text>Posts del usuario: {this.state.whoIs}</Text>
                 <View style={styles.form}>
                     <TextInput
@@ -63,7 +62,7 @@ class Search extends Component {
                     <TouchableOpacity
                         style={styles.button}
                         onPress={() => this.search(this.state.email)}
-                        //👇 Les dejo un dato sorpresa para los que llegaron hasta acá: así se deshabilita un touchable opacity
+                        
                         disabled={this.state.email == '' ? true : false}
                     >
                         <Text style={styles.buttonText}>Buscar</Text>
@@ -91,8 +90,15 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10
     },
+    box:{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 20,
+        margin: 10,
+    },
     form: {
         flex: 1,
+        gap: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginHorizontal: 20,
@@ -105,14 +111,17 @@ const styles = StyleSheet.create({
         marginBottom: 8,
         width: '70%',
         marginBottom: 0,
-        lineHeight: 40,
+        height: 40,
     },
     button: {
-        borderRadius: 2,
-        padding: 3,
-        backgroundColor: 'green',
-        width: '29%',
-        textAlign: 'center',
+        display: "flex", 
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 5,
+        padding:3,
+        backgroundColor: 'red',
+        width: 100, 
+        height: 40
     },
     buttonText: {
         color: '#fff'

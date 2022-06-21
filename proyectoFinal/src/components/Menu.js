@@ -32,35 +32,35 @@ class Menu extends Component {
     render(){
         return(
             //Armar el menú. No se necesita repetir el container.
-            <Tab.Navigator>
+            <Tab.Navigator screenOptions={{tabBarShowLabel:false}}>
                 <Tab.Screen 
                     name='Home' 
                     component={ Home }
                     options={
-                        { tabBarIcon: () => <FontAwesome name="home" size={24} color="black" /> }
+                        { tabBarIcon: () => <FontAwesome name="home" size={24} color="red" /> }
                     }
                 />
                  <Tab.Screen 
                     name='New Post' 
                     component={ NewPost }
                     options={
-                        { tabBarIcon: () => <FontAwesome name="photo" size={24} color="black" /> }
+                        { tabBarIcon: () => <FontAwesome name="photo" size={24} color="red" /> }
                     }
                 />
                  <Tab.Screen 
                     name='Search' 
                     component={ Search }
                     options={
-                        { tabBarIcon: () => <FontAwesome name="search" size={24} color="black" /> }
+                        { tabBarIcon: () => <FontAwesome name="search" size={24} color="red" /> }
                     }
                 />                
                 <Tab.Screen 
-                name='Profile' 
-                component={ Profile }
-                options={
-                    { tabBarIcon: () => <FontAwesome name="user" size={24} color="black" /> }
-                }
-                initialParams={{logout: ()=>this.props.route.params.logout()}}
+                    name='Profile' 
+                    component={ Profile }
+                    options={
+                        { tabBarIcon: () => <FontAwesome name="user" size={24} color="red" /> }
+                    }
+                    initialParams={{logout: ()=>this.props.route.params.logout()}}
                 />
                 
             </Tab.Navigator>        

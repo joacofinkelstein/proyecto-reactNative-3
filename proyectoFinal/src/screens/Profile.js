@@ -53,10 +53,10 @@ class Profile extends Component{
         //Incluir en el render un ToucheableOpacity para ejecutar el método de logout que viene del padre. ¿Quién es el padre?
         return(
                 <View style={styles.container}>
-                    <Text> Mi Perfil</Text>
+                    <Text style={styles.title}> Mi Perfil</Text>
                     {/* User + Mail */}
                     <View>  
-                        <Text>{auth.currentUser.email}</Text>
+                        <Text style={styles.texto}>{auth.currentUser.email}</Text>
                         <Text></Text>
                     </View>
                     {/*Last Online + Cant*/}
@@ -92,6 +92,12 @@ const styles = StyleSheet.create({
         padding: ' 4%', 
 
     }, 
+    title:{
+        fontSize: 24,
+    },
+    texto:{
+        fontSize: 18,
+    },
     image: {
         width: '34%', 
         height: '38%', 
